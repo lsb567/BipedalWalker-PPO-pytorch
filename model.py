@@ -14,6 +14,11 @@ class MLP(nn.Module):
             nn.Linear(obs_space * 8, obs_space * 8),
             nn.LeakyReLU(0.1),
             nn.Linear(obs_space * 8, 1)
+
+            # # ppo + lstm
+            # nn.Linear(obs_space, obs_space * 8),
+            # nn.LSTM(obs_space * 8, obs_space * 8),
+            # nn.Linear(obs_space * 8, 1)
         )
 
         self.mean = nn.Sequential(

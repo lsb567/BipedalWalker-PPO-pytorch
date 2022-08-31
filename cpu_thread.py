@@ -102,7 +102,7 @@ def cpu_thread(render, memory_queue, process_queue, common_dict, core):
     import signal
     signal.signal(signal.SIGINT, signal.SIG_IGN)
     try:
-        env = gym.make("BipedalWalker-v2")
+        env = gym.make("BipedalWalker-v3")
         pid = os.getpid()
         print('process started with pid: {} on core {}'.format(os.getpid(), core), flush=True)
         if render == 0:
